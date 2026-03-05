@@ -1,5 +1,7 @@
 ## Prompt 1: Structured Logging — Starting with Your LLM Calls
 
+Run this prompt against your codebase. The agent starts by analyzing your codebase — your tech stack, existing logging, LLM call sites — and assesses how deep it needs to go. After you confirm its findings, it interviews you about your product's failure modes, logging gaps, and preferences. It then audits your code (including catching silent error-swallowing), proposes an approach scaled to your situation, and produces an implementation spec. Review the codebase analysis and audit carefully — the patterns they surface are often the most valuable part.
+
 > **Copy this prompt and give it to your coding agent with access to your codebase.**
 
 ```text
