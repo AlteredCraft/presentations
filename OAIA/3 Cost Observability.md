@@ -20,9 +20,10 @@ Before asking me anything, analyze my codebase and present a summary of what
 you find. Cover:
 
 - LLM providers in use and which models are called
-- Workflow-to-LLM-call mapping: for each user-facing feature, trace the full
-  chain of LLM calls it triggers (e.g., retrieval → generation → validation
-  = 3 calls per user action)
+- Workflow-to-LLM-call mapping: for each user-facing feature or value stream
+  step, trace the full chain of LLM calls it triggers (e.g., retrieval →
+  generation → validation = 3 calls per user action). If journey events were
+  instrumented via Prompt 2, use those as the workflow map.
 - Retry logic on LLM calls — backoff strategies, max retry caps, nested
   retries in chains
 - Existing cost tracking — per-request cost_usd fields, token counting,
@@ -96,10 +97,10 @@ PHASE 3 — PLAN
 Based on the audit, my answers, and your codebase analysis, propose an
 implementation approach. Your plan should address:
 
-1. WORKFLOW TAGGING: A tagging approach so that cost can be grouped by
-   workflow, not just by individual request. The goal is "this feature costs
-   $X per day" not just "we spent $Y total." Base the approach on existing
-   patterns in the codebase.
+1. WORKFLOW TAGGING: A cohesive tagging approach so that cost can be grouped
+   by workflow, not just by individual request. The goal is "this feature
+   costs $X per day" not just "we spent $Y total." Build on existing patterns
+   in the codebase — including journey events from Prompt 2 if available.
 2. COST AGGREGATION: A daily and weekly cost breakdown by workflow. Identify
    the top 3 most expensive workflows and flag any that look disproportionate
    relative to their user value or my cost targets from Question 2.
