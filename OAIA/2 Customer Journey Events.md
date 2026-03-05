@@ -1,5 +1,7 @@
 ## Prompt 2: Instrument Your Top 3 Customer Journey Events
 
+The agent analyzes your codebase for existing event tracking and session infrastructure, then interviews you about the three moments that matter most (success, struggle, abandonment). It designs event schemas, checks what's already captured vs what's missing, and produces an implementation spec. The codebase analysis often reveals tracking you didn't know you had — or gaps you assumed were covered.
+
 > **Copy this prompt and give it to your coding agent with access to your codebase.**
 
 ```text
