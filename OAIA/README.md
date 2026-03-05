@@ -10,15 +10,15 @@ These prompts are designed to be run in order. Each builds on the foundation the
 
 ## The Prompts
 
-### [Prompt 1: Structured Logging — Starting with Your LLM Calls](prompt-1-structured-logging.md)
+### [Prompt 1: Structured Logging — Starting with Your LLM Calls](./1%20Structured%20Logging.md)
 
 Establishes structured logging in your application, focused on instrumenting every LLM/AI call as the highest-priority starting point. The agent analyzes your codebase first — assessing your tech stack, existing logging maturity, and LLM call sites — then adapts its scope to what you actually need: targeted improvements if logging exists, a structured upgrade if it's sparse, or a full buildout from scratch.
 
-### [Prompt 2: Customer Journey Event Instrumentation](prompt-2-journey-events.md)
+### [Prompt 2: Customer Journey Event Instrumentation](./2%20Customer%20Journey%20Events.md)
 
 Adds customer journey event tracking — the moments where users succeed, struggle, or decide to leave. The agent finds your existing analytics and event infrastructure, then interviews you about the three moments that matter most in your product. It designs event schemas tied to your application logs via request_id, turning isolated data points into knowledge you can use to reconstruct what a user experienced and why.
 
-### [Prompt 3: Per-Workflow Cost Observability](prompt-3-cost-observability.md)
+### [Prompt 3: Per-Workflow Cost Observability](./3%20Cost%20Observability.md)
 
 Maps your application's cost structure at the workflow level — which user actions, features, and agent chains are actually expensive. The agent traces LLM call chains, audits retry logic for cost amplification risks, and compares your cost perception to what the code reveals. The result is workflow-level cost visibility and runaway protection.
 
