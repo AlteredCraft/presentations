@@ -1,5 +1,7 @@
 ## Prompt 3: Per-Workflow Cost Observability
 
+Run this prompt against your codebase. The agent starts by mapping your workflows to their true LLM cost — including call chains and retry amplification you may not have realized — then interviews you about your cost awareness and targets. It compares your perception to what the code reveals, and produces a spec for workflow-level cost visibility and runaway protection. The codebase analysis often surfaces the most valuable surprises before you answer a single question.
+
 > **Copy this prompt and give it to your coding agent with access to your codebase.**
 
 ```text
